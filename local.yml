@@ -103,21 +103,21 @@ services:
   #   command: /start-flower
 
   
-  # nginx:
-  #   build:
-  #     context: ./docker/local/nginx
-  #     dockerfile: Dockerfile
-  #   restart: always
-  #   container_name: estate_nginx
-  #   ports:
-  #     - "8080:80"
-  #   volumes:
-  #     - ./staticfiles:/app/staticfiles
-  #     - logs_store:/var/log/nginx
-  #   depends_on:
-  #     - api
-  #   networks:
-  #     - estate_prod_nw
+  nginx:
+    build:
+      context: ./docker/local/nginx
+      dockerfile: Dockerfile
+    restart: always
+    container_name: estate_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./staticfiles:/app/staticfiles
+      - logs_store:/var/log/nginx
+    depends_on:
+      - api
+    networks:
+      - estate_prod_nw
     
 
 networks:
@@ -127,5 +127,5 @@ networks:
 volumes:
   estate_prod_postgres_data: {}
   estate_prod_mailpit_data: {}
-  # logs_store: {}
+  logs_store: {}
   # estate_redis_prod_data: {}

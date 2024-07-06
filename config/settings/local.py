@@ -17,6 +17,8 @@ SITE_NAME = getenv("SITE_NAME")
 # SECRET_KEY = 'django-insecure-zb4aa5--^mh-3m^4o_fdc2z3f0n!^%373=*y*&&w9n93c(y*%z'
 SECRET_KEY=getenv("DJANGO_SECRET_KEY","68sWMu-kxsnZsRS0BiKTaikRsSTAXUw9WKPzSVOnlFMGOcIPFZE")
 
+CSRF_TRUSTED_ORIGINS = ["http://localhost:8080"]
+
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
