@@ -1,6 +1,6 @@
 import { HomeModernIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-// import MobileNavbar from "./MobileNavbar";
+import MobileNavbar from "./MobileNavbar";
 import ThemeSwitcher from "./ThemeSwitcher";
 // import AuthAvatar from "@/components/shared/navbar/AuthAvatar";
 
@@ -20,7 +20,7 @@ export default function Navbar() {
 
 				{/* <AuthAvatar /> */}
 				{/* placeholder theme switcher component */}
-				{/* <MobileNavbar /> */}
+				<MobileNavbar />
 			</div>
 		</nav>
 	);
