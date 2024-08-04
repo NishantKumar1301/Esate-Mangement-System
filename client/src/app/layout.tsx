@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import React from "react";
 import "./globals.css";
 
-// import Toast from "@/components/shared/Toast";
+import Toast from "@/components/shared/Toast";
 import ReduxProvider from "@/lib/redux/provider";
 // import { PersistAuth } from "@/utils";
 
@@ -21,7 +21,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body className={`${openSans.variable} ${robotoSlab.variable}`}>
-				{/* <Toast /> */}
+				<Toast />
 				<ReduxProvider>
 					{/* <PersistAuth /> */}
 					<ThemeProvider
