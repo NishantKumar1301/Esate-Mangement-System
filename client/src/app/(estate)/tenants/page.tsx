@@ -28,8 +28,9 @@
 import { useGetAllUsersQuery } from "@/lib/redux/features/users/usersApiSlice";
 import React from "react";
 import Spinner from "@/components/shared/Spinner";
+import ProtectedRoute from "@/components/shared/ProtectedRoutes";
 
-export default function TenantsPage() {
+function TenantsPageContent() {
 	const { data, isLoading } = useGetAllUsersQuery({});
 	if (isLoading) {
 		return (
@@ -46,12 +47,20 @@ export default function TenantsPage() {
 			{data && data.profiles.results.length > 0 ? (
 				data.profiles.results.map((tenant) => (
 					<p key={tenant.id} className="text-2xl dark:text-lime-500">
-						{tenant.full_name}-{tenant.occupation}
+						{tenant.full_name} - {tenant.occupation}
 					</p>
 				))
 			) : (
 				<p>No tenants found</p>
 			)}
 		</div>
+	);
+}
+
+export default function TenantsPage() {
+	return (
+		<ProtectedRoute>
+			<TenantsPageContent />
+		</ProtectedRoute>
 	);
 }
