@@ -6,7 +6,7 @@ export const apartmentCreateSchema = z.object({
 	floor: z
 		.number()
 		.nonnegative({ message: "The building floor can't be negative" })
-		.max(5, { message: "The Floor in the building can't be more than 5" }),
+		.max(50, { message: "The Floor in the building can't be more than 50" }),
 });
 
 export type TApartmentCreateSchema = z.infer<typeof apartmentCreateSchema>;
