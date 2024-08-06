@@ -29,10 +29,10 @@ import { useAppSelector } from "@/lib/redux/hooks/typedHooks";
 
 function TenantCardContent() {
 	const { theme } = useTheme();
-	// const searchTerm = useAppSelector((state) => state.user.searchTerm);
+	const searchTerm = useAppSelector((state) => state.user.searchTerm);
 	// const page = useAppSelector((state) => state.user.page);
 
-	const { data, isLoading } = useGetAllUsersQuery({  });
+	const { data, isLoading } = useGetAllUsersQuery({ searchTerm });
 
 	const totalCount = data?.profiles.count || 0;
 	const totalPages = Math.ceil(totalCount / 9);
