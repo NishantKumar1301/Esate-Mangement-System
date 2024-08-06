@@ -9,8 +9,8 @@ import About from "@/components/profile/About";
 import Posts from "@/components/profile/Posts";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-// import Issues from "@/components/profile/Issues";
-// import AssignedIssues from "@/components/profile/AssignedIssues";
+import Issues from "@/components/profile/Issues";
+import AssignedIssues from "@/components/profile/AssignedIssues";
 // import Reports from "@/components/profile/Reports";
 
 export const metadata: Metadata = {
@@ -55,11 +55,11 @@ function ProfilePageContent() {
 						<Posts />
 
 						{/* issue tab content */}
-						{/* <Issues /> */}
+						<Issues />
 						{/* report tab content */}
 						{/* <Reports /> */}
 						{/* assigned Issue tab content */}
-						{/* <AssignedIssues /> */}
+						<AssignedIssues />
 					</Tabs>
 				</div>
 			</div>
