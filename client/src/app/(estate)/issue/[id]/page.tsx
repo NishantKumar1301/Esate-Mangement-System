@@ -1,4 +1,4 @@
-// import IssueDetails from "@/components/issue/IssueDetails";
+import IssueDetails from "@/components/issue/IssueDetails";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ interface ParamsProps {
 export default function IssueDetailPage({ params }: ParamsProps) {
 	return (
 		<div>
-			{/* <IssueDetails params={params} /> */}
+			<IssueDetails params={params} />
 		</div>
 	);
 }
