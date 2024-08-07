@@ -16,8 +16,8 @@ import ProtectedRoute from "../shared/ProtectedRoutes";
 import { getRepliesText, sortByDateDescending } from "@/utils";
 import { MessageCircleMoreIcon } from "lucide-react";
 import PostFooter from "./PostFooter";
-// import RepliesList from "./RepliesList";
-// import CreateReplyForm from "../forms/add-reply/CreateReplyForm";
+import RepliesList from "./RepliesList";
+import CreateReplyForm from "../forms/add-reply/CreateReplyForm";
 
 interface PostDetailsProps {
 	params: {
@@ -84,7 +84,7 @@ function PostDetailsContent({ params }: PostDetailsProps) {
 			<PostBody body={post?.body} slug={post?.slug} />
 			<PostFooter tags={post?.tags} replies_count={post?.replies_count} />
 
-			{/* <div className="border-b-eerieBlack dark:border-gray dark:text-platinum ml-4 space-y-4 border-b border-dashed py-4">
+			<div className="border-b-eerieBlack dark:border-gray dark:text-platinum ml-4 space-y-4 border-b border-dashed py-4">
 				<span className="font-robotoSlab dark:text-pumpkin flex flex-row items-center text-lg font-semibold">
 					<MessageCircleMoreIcon className="tab-icon text-electricIndigo mr-2" />
 					{getRepliesText(post?.replies_count)}
@@ -96,13 +96,13 @@ function PostDetailsContent({ params }: PostDetailsProps) {
 				) : (
 					<p className="text-lg">This Post does&apos;t have any replies yet</p>
 				)}
-			</div> */}
+			</div>
 
 			<CardContent className="border-b-eerieBlack dark:border-gray dark:text-platinum border-b border-dashed">
 				<h2 className="h2-semibold dark:text-pumpkin mt-3">
 					Add your reply here
 				</h2>
-				{/* <CreateReplyForm slug={post?.slug} /> */}
+				<CreateReplyForm slug={post?.slug} />
 			</CardContent>
 		</Card>
 	);
