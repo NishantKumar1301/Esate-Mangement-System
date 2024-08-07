@@ -59,7 +59,7 @@ export default function AuthAvatar() {
 						</DropdownMenuItem>
 
 						<DropdownMenuItem className="auth-nav">
-							<Link href="/bookmarks" className="flex-row-center">
+							<Link href="/bookmark" className="flex-row-center">
 								<BookMarked className="mr-1" /> My Bookmarks
 							</Link>
 						</DropdownMenuItem>
