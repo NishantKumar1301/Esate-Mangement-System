@@ -26,6 +26,7 @@ export const postApiSlice = baseApiSlice.injectEndpoints({
 			}),
 			invalidatesTags: ["Post"],
 		}),
+		
 		getAllPosts: builder.query<PostsResponse, PostQueryParams>({
 			query: (params = {}) => {
 				const queryString = new URLSearchParams();

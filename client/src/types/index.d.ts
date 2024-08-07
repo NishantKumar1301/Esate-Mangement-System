@@ -40,6 +40,7 @@ interface Post {
 	replies: Reply[];
 }
 
+
 export interface PostsResponse {
 	posts: {
 		count: number;
