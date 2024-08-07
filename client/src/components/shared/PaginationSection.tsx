@@ -9,33 +9,33 @@ import {
 	PaginationPrevious,
 } from "../ui/pagination";
 
-// import { setCurrentPage as setPostCurrentPage } from "@/lib/redux/features/posts/postSlice";
+import { setCurrentPage as setPostCurrentPage } from "@/lib/redux/features/posts/postSlice";
 
 interface PaginationSectionProps {
 	totalPages: number;
-	// entityType: "user" | "post";
+	entityType: "user" | "post";
 }
 
 const PaginationSection = ({
 	totalPages,
-	// entityType,
+	entityType,
 }: PaginationSectionProps) => {
 	const dispatch = useAppDispatch();
 
-	const currentPage = useAppSelector((state) => state.user.page
-		// entityType === "user" ? state.user.page : state.post.page,
+	const currentPage = useAppSelector((state) =>
+		entityType === "user" ? state.user.page : state.post.page,
 	);
 
-	// const setCurrentPageAction =
-	// 	entityType === "user" ? setUserCurrentPage : setPostCurrentPage;
+	const setCurrentPageAction =
+		entityType === "user" ? setUserCurrentPage : setPostCurrentPage;
 
 	const handlePreviousClick = () => {
-		if (currentPage > 1) dispatch(setUserCurrentPage(currentPage - 1));
+		if (currentPage > 1) dispatch(setCurrentPageAction(currentPage - 1));
 	};
 
 	const handleNextClick = () => {
 		if (currentPage < totalPages)
-			dispatch(setUserCurrentPage(currentPage + 1));
+			dispatch(setCurrentPageAction(currentPage + 1));
 	};
 
 	return (

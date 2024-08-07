@@ -32,7 +32,7 @@ function TenantCardContent() {
 	const searchTerm = useAppSelector((state) => state.user.searchTerm);
 	const page = useAppSelector((state) => state.user.page);
 
-	const { data, isLoading } = useGetAllUsersQuery({ searchTerm , page });
+	const { data, isLoading } = useGetAllUsersQuery({ searchTerm, page });
 
 	const totalCount = data?.profiles.count || 0;
 	const totalPages = Math.ceil(totalCount / 9);
@@ -123,8 +123,7 @@ function TenantCardContent() {
 					<p>No tenants found</p>
 				)}
 			</div>
-			{/* <PaginationSection totalPages={totalPages} entityType="user" /> */}
-            <PaginationSection totalPages={totalPages} />
+			<PaginationSection totalPages={totalPages} entityType="user" />
 		</div>
 	);
 }
