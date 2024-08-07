@@ -8,6 +8,6 @@ export const UseGoogle = () => InitiateSocialAuth("google-oauth2", "google");
 export { formatDate } from "./formatDate";
 export { capitalizeFirstLetter } from "./capitalizeFirstLetter";
 
-// export { getRepliesText } from "./getRepliesText";
-// export { getViewText } from "./getViewText";
-// export { sortByDateDescending } from "./sortByDate";
+export { getRepliesText } from "./getRepliesText";
+export { getViewText } from "./getViewText";
+export { sortByDateDescending } from "./sortByDate";

@@ -1,4 +1,4 @@
-// import PostDetails from "@/components/post/PostDetails";
+import PostDetails from "@/components/post/PostDetails";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ interface ParamsProps {
 export default function PostDetailPage({ params }: ParamsProps) {
 	return (
 		<>
-			{/* <PostDetails params={params} /> */}
+			<PostDetails params={params} />
 		</>
 	);
 }
